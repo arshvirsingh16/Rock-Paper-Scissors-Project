@@ -35,7 +35,7 @@ function whoWins(computerChoice, playerChoice) {
         }
 
         else {
-            console.log("Its a tie. You both chose rock.");
+            console.log("Its a tie. You both chose rock. Yay.");
         }
 
         
