@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
     <title>Rock Paper Scissors Project</title>
     <link rel="stylesheet" href="rps.css">
 </head>
 <body>
-    <script src="../js/main.js"></script>
+  
     
     <div class = "container">
         <div class = "top">
@@ -32,24 +33,25 @@
                 <div class = "rock">
                     <img src = "images/rockIcon.png">
                 </div>
-              <button type = "button">ROCK</button> 
+              <button id = "button" value = "rock">ROCK</button> 
             </div>
             <div class = 'options'>
                 <div class = "paper">
                     <img src = "images/paperIcon.jpg">
                 </div>
-                <button type = "button">PAPER</button>   
+                <button id = "button" value = "paper">PAPER</button>   
             </div>
             <div class = 'options'>
-                <div class = "scissor">
+                <div class = "scissor" >
                     <img src = "images/scissorsIcon.jpg">
                 </div>
-                <button type = "button">SCISSORS</button> 
+                <button id = "button" value = "scissors">SCISSORS</button> 
             </div>
         </div>
 
         <div class = "score">
             <h3>SCORE</h3>
+            <p id = "output"></p>
         </div>
     </div>
 </body>

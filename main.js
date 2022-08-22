@@ -133,5 +133,14 @@ console.log(computer);
 
 wonGame(player, computer);
 }
+
+//NEW BRANCH CREATING A BUTTON
+
+const btns = document.querySelectorAll("#button");
+btns.forEach(btn => btn.addEventListener('click', playRound));
+
+
+
+
     
  
