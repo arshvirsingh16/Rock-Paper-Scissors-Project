@@ -2,7 +2,9 @@ body {
     background-color: #121212;
 }
 
-
+.top{
+    display: flex;
+}
 
 .title {
     width: fit-content;
@@ -13,6 +15,12 @@ body {
     border:#64b2ed solid;
     border-radius: 1rem;
     padding: 2rem;
+    
+}
+
+img {
+    width: 100px;
+    
     
 }
 
@@ -30,6 +38,13 @@ body {
 }
 
 .options {
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;;
+
+}
+.rps {
     border:#64b2ed;
     border-style: solid;
     border-radius: .5rem;
@@ -37,10 +52,21 @@ body {
     font-size: 20px;
     width: 100px;
     text-align: center;
+    margin-top: 20px;
+    
 }
 
-.rps {
-    color: 
+button {
+    border:#64b2ed;
+    border-style: solid;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    margin-top: 70px;
+    background-color: #121212;
+    color: #ffff;
 }
 
 .score {
