@@ -1,3 +1,55 @@
-body{
-    background-color: #8199f0;
+body {
+    background-color: #121212;
+}
+
+
+
+.title {
+    width: fit-content;
+    margin-right:auto;
+    margin-left: auto;
+    font-size: 30px;
+    color: #ffff;
+    border:#64b2ed solid;
+    border-radius: 1rem;
+    padding: 2rem;
+    
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: auto;
+    box-shadow: 0 0 0 100vmax #121212;
+    clip-path: inset(0 -100vmax);
+    color: #ffff;
+    margin-top: 100px;
+    height: 500px;
+    background-color: #121212;
+}
+
+.options {
+    border:#64b2ed;
+    border-style: solid;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.rps {
+    color: 
+}
+
+.score {
+    color:#ffff;
+    border:#64b2ed solid;
+    margin-top: 0px;
+    height: 580px;
+    display:flex;
+    justify-content: center;
+    border-radius: 1rem;
+    font-size: 25px;
 }
