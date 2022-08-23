@@ -111,6 +111,20 @@ function wonGame(player, computer) {
 
 function getPlayerChoice() {
     var playerChoice;
+
+    const btns = document.querySelectorAll('button');
+    btns.forEach((button) => {
+        button.addEventListener('click', () => {
+            value; 
+        });
+    }); 
+
+    playerChoice = btns;
+    
+}
+
+function getPlayerChoice() {
+    var playerChoice;
     const rbtn = 
 }
 
@@ -144,7 +158,7 @@ wonGame(player, computer);
 
 
 const sbtn = document.querySelector('sbutton');
-sbtn.addEventListener('click', playRound)
+sbtn.addEventListener('click', playRound);
 
 
 
