@@ -109,24 +109,21 @@ function wonGame(player, computer) {
 
 // }
 
-function getPlayerChoice() {
+const btns = document.querySelectorAll('button');
+
+function getPlayerChoice(e) {
     var playerChoice;
 
-    const btns = document.querySelectorAll('button');
-    btns.forEach((button) => {
-        button.addEventListener('click', () => {
-            value; 
-        });
+    console.log(e.target.value);
+}
+
+const 
+
+
+
+btns.forEach((button) => {
+        button.addEventListener('click', getPlayerChoice);
     }); 
-
-    playerChoice = btns;
-    
-}
-
-function getPlayerChoice() {
-    var playerChoice;
-    const rbtn = 
-}
 
 // GAME 
 
@@ -147,18 +144,18 @@ function getPlayerChoice() {
 
 // }
 
-console.log(player);
-console.log(computer);
+// console.log(player);
+// console.log(computer);
 
-wonGame(player, computer);
-}
+// wonGame(player, computer);
+
 
 //NEW BRANCH CREATING A BUTTON
 
 
 
-const sbtn = document.querySelector('sbutton');
-sbtn.addEventListener('click', playRound);
+// const sbtn = document.querySelector('sbutton');
+// sbtn.addEventListener('click', playRound);
 
 
 
