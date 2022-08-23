@@ -88,45 +88,50 @@ function wonGame(player, computer) {
     }
 }
 
+// function getPlayerChoice() {
+
+//     let playerChoice = window.prompt("Rock, Paper or Scissors?")
+
+//     if(playerChoice.toLowerCase() === "rock") {
+//         playerChoice = "Rock";
+//     }
+
+//     else if(playerChoice.toLowerCase() === "paper") {
+//         playerChoice = "Paper"
+//     }
+
+//     else {
+//         playerChoice = "Scissors"
+//     }
+
+//     return playerChoice;
+
+
+// }
+
 function getPlayerChoice() {
-
-    let playerChoice = window.prompt("Rock, Paper or Scissors?")
-
-    if(playerChoice.toLowerCase() === "rock") {
-        playerChoice = "Rock";
-    }
-
-    else if(playerChoice.toLowerCase() === "paper") {
-        playerChoice = "Paper"
-    }
-
-    else {
-        playerChoice = "Scissors"
-    }
-
-    return playerChoice;
-
-
+    var playerChoice;
+    const rbtn = 
 }
 
 // GAME 
 
-for(let i = 0; i < 1; i++) {    
+// for(let i = 0; i < 1; i++) {    
 
-for (let i = 0; i < 5; i++) {
+// for (let i = 0; i < 5; i++) {
 
-    let playerChoice = getPlayerChoice();
+//     let playerChoice = getPlayerChoice();
     
-    getRandomInt(max);
-    let int = getRandomInt(max);
+//     getRandomInt(max);
+//     let int = getRandomInt(max);
 
-    getComputerChoice(int);
-    let computerChoice = getComputerChoice(int);
+//     getComputerChoice(int);
+//     let computerChoice = getComputerChoice(int);
 
-    whoWins(computerChoice, playerChoice);
+//     whoWins(computerChoice, playerChoice);
 
 
-}
+// }
 
 console.log(player);
 console.log(computer);
@@ -136,8 +141,16 @@ wonGame(player, computer);
 
 //NEW BRANCH CREATING A BUTTON
 
-const btns = document.querySelectorAll("#button");
-btns.forEach(btn => btn.addEventListener('click', playRound));
+
+
+const sbtn = document.querySelector('sbutton');
+sbtn.addEventListener('click', playRound)
+
+
+
+
+// const btns = document.querySelectorAll("#button");
+// btns.forEach(btn => btn.addEventListener('click', playRound));
 
 
 
