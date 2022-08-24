@@ -98,15 +98,18 @@ function whoWins(computerChoice, playerChoice) {
  
 function wonGame(player, computer) {
     if(player > computer) {
-        console.log("Congrats! You won!");
+        document.getElementById("Output").innerHTML =
+        "Congrats! You won!";
     }
 
     else if(computer > player) {
-        console.log("Damn, imagine losing to a computer. LOL");
+        document.getElementById("Output").innerHTML =
+        "Damn, imagine losing to a computer. LOL";
     }
 
     else {
-        console.log("There are no winners. You both lose.");
+        document.getElementById("Output").innerHTML =
+        "There are no winners. You both lose.";
     }
 }
 
@@ -164,20 +167,43 @@ btns.forEach(button => {
         
         playRound(selection);
     })
-})
+});
 
+function reset() {
+    
+    wonGame(player, computer);
+    player = 0;
+    computer = 0;
+    document.getElementById("userScore").innerHTML = 
+        "USER: " + player;
+    document.getElementById("compScore").innerHTML = 
+        "COMP: " + computer;
+}
 
 function playRound(selection) {
     let int = getRandomInt(max);
     let computerChoice = getComputerChoice(int);
     let playerChoice = selection;
     whoWins(computerChoice, playerChoice);
+    // if(player >= 5 || computer >= 5){
+    //     btns.forEach(button => {
+    //         button.removeEventListener('click', () => {
+                
+    //         })
+    //     });
+        
+    //     setTimeout(reset, 5000);
+    //     btns.forEach(button => {
+    //         button.addEventListener('click', () => {
+    //             const selection = button.value;
+                
+    //             playRound(selection);
+    //         })
+    //     });
+    // }
+
 }
 
-// playRound(selection);
-
-// const sbtn = document.querySelector('sbutton');
-// sbtn.addEventListener('click', playRound);
 
 
 
