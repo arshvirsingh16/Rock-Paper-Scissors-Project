@@ -1,5 +1,11 @@
+html {
+    height: 100vh;
+}
+
+
+
 body {
-    background-color: #121212;
+    background-color: #081b3b;
 }
 
 .top{
@@ -33,15 +39,12 @@ img {
     justify-content: space-evenly;
     align-items: center;
     margin-top: auto;
-    box-shadow: 0 0 0 100vmax #121212;
     clip-path: inset(0 -100vmax);
     color: #ffff;
-    margin-top: 100px;
+    margin-top: 200px;
     height: 500px;
-    background-color: #121212;
+    
 }
-
-
 
 .options {
     display:flex;
@@ -59,32 +62,78 @@ img {
     margin-top: 20px;  
 }
 
-button {
-    border:#64b2ed;
-    border-style: solid;
+.button {
+    border: none;
+    border: 3px solid #64b2ed;
     border-radius: .5rem;
     padding: 1rem;
     font-size: 20px;
     width: 300px;
     text-align: center;
     margin-top: 70px;
-    background-color: #121212;
+    background-color: #081b3b;
+    color: #ffff;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    font-size: 2 rem;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.button:hover {
     color: #ffff;
     cursor: pointer;
 }
 
-button:hover {
-    transition: scale(4);
+.button:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right:50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: black;
 }
 
-#sbutton {
-    border: purple solid;
+.button:hover:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity:1;
+    z-index:-1;
 }
+
+/* .rock {
+    background-image: url(images/rockIcon.png);
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+
+.paper {
+    background-image: url(images/paperIcon.jpg);
+    height: 200px;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+
+.scissors {
+    background-image: url(images/scissorsIcon.jpg);
+} */
+
+#rpsImage {
+    width: 300px;
+}
+
 
 .score {
     color:#ffff;
     border:#64b2ed solid;
     margin-top: 0px;
+    
     height: 200px;
     /* justify-content: center; */
     border-radius: 1rem;

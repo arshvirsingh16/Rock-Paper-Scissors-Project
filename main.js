@@ -25,21 +25,24 @@ function getComputerChoice(int) {
 function whoWins(computerChoice, playerChoice) {
     if(playerChoice == "Rock") {
         if(computerChoice == "Scissors") {
-            console.log("Player wins. Rock beats scissors.");
+            document.getElementById("Output").innerHTML =
+            "Player wins. Rock beats scissors.";
             player ++;
             document.getElementById("userScore").innerHTML = 
             "USER: " + player;
         }
 
         else if(computerChoice == "Paper") {
-            console.log("Computer wins. Paper beats rock.");
+            document.getElementById("Output").innerHTML =
+            "Computer wins. Paper beats rock.";
             computer ++;
             document.getElementById("compScore").innerHTML = 
             "COMP: " + computer;
         }
 
         else {
-            console.log("Its a tie. You both chose rock. Yay.");
+            document.getElementById("Output").innerHTML =
+            "Its a tie. You both chose rock. Yay.";
         }
 
         
@@ -47,45 +50,52 @@ function whoWins(computerChoice, playerChoice) {
 
     if(playerChoice == "Paper"){
         if(computerChoice == "Rock") {
-            console.log("Player wins. Paper beats rock.");
+            document.getElementById("Output").innerHTML =
+            "Player wins. Paper beats rock.";
             player++;
             document.getElementById("userScore").innerHTML = 
             "USER: " +player;
         }
 
         else if(computerChoice == "Scissors") {
-            console.log("Computer wins. Scissors beats Paper.");
+            document.getElementById("Output").innerHTML =
+            "Computer wins. Scissors beats Paper.";
             computer++;
             document.getElementById("compScore").innerHTML = 
             "COMP: " + computer;
         }
 
         else {
-            console.log("It's a tie. You both chose Paper.");
+            document.getElementById("Output").innerHTML =
+            "It's a tie. You both chose Paper.";
         }
     }
 
     if(playerChoice == "Scissors") {
         if (computerChoice == "Paper") {
-            console.log("Player wins. Scissors beats paper.");
+            document.getElementById("Output").innerHTML =
+            "Player wins. Scissors beats paper.";
+
             player++;
             document.getElementById("userScore").innerHTML = 
             "USER: " + player;
         }
 
         else if(computerChoice == "Rock") {
-            console.log("Computer wins. Rock beats scissors.");
+            document.getElementById("Output").innerHTML =
+            "Computer wins. Rock beats scissors.";
             computer++;
             document.getElementById("compScore").innerHTML = 
             "COMP: " + computer;
         }
 
         else {
-            console.log("Tie");
+            document.getElementById("Output").innerHTML =
+            "Tie";
         }
     }
 }
-
+ 
 function wonGame(player, computer) {
     if(player > computer) {
         console.log("Congrats! You won!");
