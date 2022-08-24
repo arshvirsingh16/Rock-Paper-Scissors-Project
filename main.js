@@ -159,13 +159,12 @@ function wonGame(player, computer) {
 const btns = document.querySelectorAll('[value]');
 
 btns.forEach(button => {
-    button.addEventListener('click', e => {
+    button.addEventListener('click', () => {
         const selection = button.value;
-        console.log(selection);
+        
         playRound(selection);
     })
 })
-
 
 
 function playRound(selection) {
