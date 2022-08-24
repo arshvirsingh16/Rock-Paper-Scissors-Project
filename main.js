@@ -27,11 +27,15 @@ function whoWins(computerChoice, playerChoice) {
         if(computerChoice == "Scissors") {
             console.log("Player wins. Rock beats scissors.");
             player ++;
+            document.getElementById("userScore").innerHTML = 
+            "USER: " + player;
         }
 
         else if(computerChoice == "Paper") {
             console.log("Computer wins. Paper beats rock.");
             computer ++;
+            document.getElementById("compScore").innerHTML = 
+            "COMP: " + computer;
         }
 
         else {
@@ -45,11 +49,15 @@ function whoWins(computerChoice, playerChoice) {
         if(computerChoice == "Rock") {
             console.log("Player wins. Paper beats rock.");
             player++;
+            document.getElementById("userScore").innerHTML = 
+            "USER: " +player;
         }
 
         else if(computerChoice == "Scissors") {
             console.log("Computer wins. Scissors beats Paper.");
             computer++;
+            document.getElementById("compScore").innerHTML = 
+            "COMP: " + computer;
         }
 
         else {
@@ -61,11 +69,15 @@ function whoWins(computerChoice, playerChoice) {
         if (computerChoice == "Paper") {
             console.log("Player wins. Scissors beats paper.");
             player++;
+            document.getElementById("userScore").innerHTML = 
+            "USER: " + player;
         }
 
         else if(computerChoice == "Rock") {
-            console.log("Compuetr wins. Rock beats scissors.");
+            console.log("Computer wins. Rock beats scissors.");
             computer++;
+            document.getElementById("compScore").innerHTML = 
+            "COMP: " + computer;
         }
 
         else {
@@ -109,21 +121,6 @@ function wonGame(player, computer) {
 
 // }
 
-const btns = document.querySelectorAll('button');
-
-function getPlayerChoice(e) {
-    var playerChoice;
-
-    console.log(e.target.value);
-}
-
-const 
-
-
-
-btns.forEach((button) => {
-        button.addEventListener('click', getPlayerChoice);
-    }); 
 
 // GAME 
 
@@ -149,19 +146,32 @@ btns.forEach((button) => {
 
 // wonGame(player, computer);
 
+const btns = document.querySelectorAll('[value]');
 
-//NEW BRANCH CREATING A BUTTON
+btns.forEach(button => {
+    button.addEventListener('click', e => {
+        const selection = button.value;
+        console.log(selection);
+        playRound(selection);
+    })
+})
 
 
+
+function playRound(selection) {
+    let int = getRandomInt(max);
+    let computerChoice = getComputerChoice(int);
+    let playerChoice = selection;
+    whoWins(computerChoice, playerChoice);
+}
+
+// playRound(selection);
 
 // const sbtn = document.querySelector('sbutton');
 // sbtn.addEventListener('click', playRound);
 
 
 
-
-// const btns = document.querySelectorAll("#button");
-// btns.forEach(btn => btn.addEventListener('click', playRound));
 
 
 
