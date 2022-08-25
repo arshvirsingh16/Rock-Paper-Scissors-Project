@@ -29,7 +29,7 @@ function whoWins(computerChoice, playerChoice) {
             "Player wins. Rock beats scissors.";
             player ++;
             document.getElementById("userScore").innerHTML = 
-            "USER: " + player;
+            "USER: "  + player;
         }
 
         else if(computerChoice == "Paper") {
@@ -169,6 +169,9 @@ btns.forEach(button => {
     })
 });
 
+const btnr = document.querySelector("#reset");
+btnr.addEventListener('click', reset);
+
 function reset() {
     
     wonGame(player, computer);
@@ -178,28 +181,36 @@ function reset() {
         "USER: " + player;
     document.getElementById("compScore").innerHTML = 
         "COMP: " + computer;
+    
+    document.getElementById("Output").innerHTML = 
+    "The game has restarted. Choose rock, paper, or scissors to start again!"
 }
 
 function playRound(selection) {
+    
     let int = getRandomInt(max);
     let computerChoice = getComputerChoice(int);
     let playerChoice = selection;
     whoWins(computerChoice, playerChoice);
+    
+    
     // if(player >= 5 || computer >= 5){
     //     btns.forEach(button => {
     //         button.removeEventListener('click', () => {
                 
+    //         }, {
+    //             once: true
     //         })
     //     });
         
-    //     setTimeout(reset, 5000);
-    //     btns.forEach(button => {
-    //         button.addEventListener('click', () => {
-    //             const selection = button.value;
+        // setTimeout(reset, 5000);
+        // btns.forEach(button => {
+        //     button.addEventListener('click', () => {
+        //         const selection = button.value;
                 
-    //             playRound(selection);
-    //         })
-    //     });
+        //         playRound(selection);
+        //     })
+        // });
     // }
 
 }
