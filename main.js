@@ -97,6 +97,7 @@ function whoWins(computerChoice, playerChoice) {
 }
  
 function wonGame(player, computer) {
+    
     if(player > computer) {
         document.getElementById("Output").innerHTML =
         "Congrats! You won!";
@@ -112,69 +113,29 @@ function wonGame(player, computer) {
         "There are no winners. You both lose.";
     }
 }
-
-// function getPlayerChoice() {
-
-//     let playerChoice = window.prompt("Rock, Paper or Scissors?")
-
-//     if(playerChoice.toLowerCase() === "rock") {
-//         playerChoice = "Rock";
-//     }
-
-//     else if(playerChoice.toLowerCase() === "paper") {
-//         playerChoice = "Paper"
-//     }
-
-//     else {
-//         playerChoice = "Scissors"
-//     }
-
-//     return playerChoice;
-
-
-// }
-
-
-// GAME 
-
-// for(let i = 0; i < 1; i++) {    
-
-// for (let i = 0; i < 5; i++) {
-
-//     let playerChoice = getPlayerChoice();
-    
-//     getRandomInt(max);
-//     let int = getRandomInt(max);
-
-//     getComputerChoice(int);
-//     let computerChoice = getComputerChoice(int);
-
-//     whoWins(computerChoice, playerChoice);
-
-
-// }
-
-// console.log(player);
-// console.log(computer);
-
-// wonGame(player, computer);
-
 const btns = document.querySelectorAll('[value]');
+
 
 btns.forEach(button => {
     button.addEventListener('click', () => {
         const selection = button.value;
-        
-        playRound(selection);
+        if(player <5 && computer<5){
+            playRound(selection);
+        }
+        else {
+            wonGame(player, computer);
+            setTimeout(reset, 2000);
+            
+        }
     })
 });
+
 
 const btnr = document.querySelector("#reset");
 btnr.addEventListener('click', reset);
 
 function reset() {
     
-    wonGame(player, computer);
     player = 0;
     computer = 0;
     document.getElementById("userScore").innerHTML = 
@@ -187,40 +148,27 @@ function reset() {
 }
 
 function playRound(selection) {
+        let int = getRandomInt(max);
+        let computerChoice = getComputerChoice(int);
+        let playerChoice = selection;
+        whoWins(computerChoice, playerChoice);
     
-    let int = getRandomInt(max);
-    let computerChoice = getComputerChoice(int);
-    let playerChoice = selection;
-    whoWins(computerChoice, playerChoice);
     
     
     // if(player >= 5 || computer >= 5){
     //     btns.forEach(button => {
-    //         button.removeEventListener('click', () => {
-                
-    //         }, {
-    //             once: true
-    //         })
+    //         button.removeEventListener('click', () => { 
+    //         });
     //     });
         
-        // setTimeout(reset, 5000);
-        // btns.forEach(button => {
-        //     button.addEventListener('click', () => {
-        //         const selection = button.value;
+    //     setTimeout(reset, 5000);
+    //     btns.forEach(button => {
+    //         button.addEventListener('click', () => {
+    //             const selection = button.value;
                 
-        //         playRound(selection);
-        //     })
-        // });
+    //             playRound(selection);
+    //         })
+    //     });
     // }
 
-}
-
-
-
-
-
-
-
-
-    
- 
+    }
