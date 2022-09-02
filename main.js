@@ -121,10 +121,12 @@ btns.forEach(button => {
         const selection = button.value;
         if(player <5 && computer<5){
             playRound(selection);
-        }
-        else {
-            wonGame(player, computer);
-            setTimeout(reset, 2000);
+            setTimeout(() => {
+                if(player == 5 || computer == 5) {
+                    wonGame(player, computer);
+                    setTimeout(reset, 2000);   
+                }
+            },1000)
             
         }
     })
