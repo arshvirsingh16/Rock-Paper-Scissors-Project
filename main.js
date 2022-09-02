@@ -26,7 +26,7 @@ function whoWins(computerChoice, playerChoice) {
     if(playerChoice == "Rock") {
         if(computerChoice == "Scissors") {
             document.getElementById("Output").innerHTML =
-            "Player wins. Rock beats scissors.";
+            "The computer chose scissors.  Rock beats scissors, so you win!";
             player ++;
             document.getElementById("userScore").innerHTML = 
             "USER: "  + player;
@@ -34,7 +34,7 @@ function whoWins(computerChoice, playerChoice) {
 
         else if(computerChoice == "Paper") {
             document.getElementById("Output").innerHTML =
-            "Computer wins. Paper beats rock.";
+            "The computer chose paper. Paper beats rock, you lose this one.";
             computer ++;
             document.getElementById("compScore").innerHTML = 
             "COMP: " + computer;
@@ -42,7 +42,7 @@ function whoWins(computerChoice, playerChoice) {
 
         else {
             document.getElementById("Output").innerHTML =
-            "Its a tie. You both chose rock. Yay.";
+            "The computer chose rock and you did too. Tie!";
         }
 
         
@@ -51,7 +51,7 @@ function whoWins(computerChoice, playerChoice) {
     if(playerChoice == "Paper"){
         if(computerChoice == "Rock") {
             document.getElementById("Output").innerHTML =
-            "Player wins. Paper beats rock.";
+            "The computer chose rock. Paper beats rock so you win!.";
             player++;
             document.getElementById("userScore").innerHTML = 
             "USER: " +player;
@@ -59,7 +59,7 @@ function whoWins(computerChoice, playerChoice) {
 
         else if(computerChoice == "Scissors") {
             document.getElementById("Output").innerHTML =
-            "Computer wins. Scissors beats Paper.";
+            "The computer chose scissors. Scissors beats paper, so unfortunately you lost this one.";
             computer++;
             document.getElementById("compScore").innerHTML = 
             "COMP: " + computer;
@@ -67,14 +67,14 @@ function whoWins(computerChoice, playerChoice) {
 
         else {
             document.getElementById("Output").innerHTML =
-            "It's a tie. You both chose Paper.";
+            "The computer chose paper and so did you. Tie!";
         }
     }
 
     if(playerChoice == "Scissors") {
         if (computerChoice == "Paper") {
             document.getElementById("Output").innerHTML =
-            "Player wins. Scissors beats paper.";
+            "The computer chose paper. Scissors beats paper so you win!.";
 
             player++;
             document.getElementById("userScore").innerHTML = 
@@ -83,7 +83,7 @@ function whoWins(computerChoice, playerChoice) {
 
         else if(computerChoice == "Rock") {
             document.getElementById("Output").innerHTML =
-            "Computer wins. Rock beats scissors.";
+            "The computer chose rock. Rock beats scissors, tough loss.";
             computer++;
             document.getElementById("compScore").innerHTML = 
             "COMP: " + computer;
@@ -91,7 +91,7 @@ function whoWins(computerChoice, playerChoice) {
 
         else {
             document.getElementById("Output").innerHTML =
-            "Tie";
+            "The computer chose scissors and so did you. Tie!";
         }
     }
 }
@@ -110,12 +110,12 @@ function wonGame(player, computer) {
 
     else {
         document.getElementById("Output").innerHTML =
-        "There are no winners. You both lose.";
+        "They say there are no winners or losers. However, in this game you both lose.";
     }
 }
+
+//This will start the round
 const btns = document.querySelectorAll('[value]');
-
-
 btns.forEach(button => {
     button.addEventListener('click', () => {
         const selection = button.value;
