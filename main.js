@@ -119,6 +119,7 @@ const btns = document.querySelectorAll('[value]');
 btns.forEach(button => {
     button.addEventListener('click', () => {
         const selection = button.value;
+        console.log(button.id);
         if(player <5 && computer<5){
             playRound(selection);
             setTimeout(() => {
